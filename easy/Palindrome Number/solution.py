@@ -10,3 +10,11 @@ class Solution:
             ans = ans*10 + dup%10
             dup //= 10
         return ans == x
+
+    def isPalindrome(self, x: int) -> bool:
+        if x < 0:
+            return False
+        elif x in list(range(0, 10)):
+            return True
+        return str(x) == str(x)[::-1]:
+        
