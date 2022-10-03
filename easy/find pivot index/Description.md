@@ -24,6 +24,9 @@ Explanation:
 There is no index that satisfies the conditions in the problem statement.
 Example 3:
 
+
+
+
 Input: nums = [2,1,-1]
 Output: 0
 Explanation:
