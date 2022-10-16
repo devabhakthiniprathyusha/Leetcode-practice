@@ -5,6 +5,8 @@ class Solution:
 
         # return false false when mapped more than once in
         # any of the two hashmaps
+
+        #O(n) and O(n)
         st, ts = {}, {}
 
         for i in range(len(s)):
