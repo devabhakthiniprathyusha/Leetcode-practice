@@ -2,6 +2,24 @@
 # Approach: Sort all strings and group them
 
 class Solution:
+    # using sorted O(m*n*logn) m-lenght of strs and n is len of string in strs
+    def groupAnagrams(self, strs):
+        ans = collections.defaultdict(list)
+        for s in strs:
+            ans[tuple(sorted(s))].append(s)
+        return ans.values()
+
+    # using hash O(m*n*26) = O(mn)
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        ans = defaultdict(list)
+        for s in strs:
+            count = [0] * 26
+            for c in s:
+                count[ord(c) - ord("a")] += 1
+            ans[tuple(count)].append(s)
+        return ans.values()
+
+
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         n = len(strs)
         mp = {}
