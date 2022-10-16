@@ -1,4 +1,4 @@
-# Time complexity: O(nlogn)
+# Time complexity: O(n)
 # Approach: iterate through the list keeping the track of available elements and their indices in dict.
 # When the complementry item arrives, return the indices.
 
@@ -13,7 +13,7 @@ class Solution:
                     output.append(i)
                     output.append(i + 1)
         return output
-
+    #one pass hash table
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         hashmap = {}
 
